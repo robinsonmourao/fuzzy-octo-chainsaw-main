@@ -15,13 +15,11 @@ Rails.application.routes.draw do
   root 'sessions#new'
   
 
-  resources :movies
-
-  movieId = 1
+#  resources :movies
 
   resources :movies do
     collection do
-      post movieId
+      post "import"
     end
   end
 
