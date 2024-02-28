@@ -13,4 +13,17 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   root 'sessions#new'
+  
+
+  resources :movies
+
+  movieId = 1
+
+  resources :movies do
+    collection do
+      post movieId
+    end
+  end
+
+  
 end
