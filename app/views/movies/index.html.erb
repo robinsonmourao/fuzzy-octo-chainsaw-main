@@ -1,8 +1,5 @@
 <h1>Movies</h1>
 <%= link_to "Add new", new_movie_path %>
-
-<%= link_to "Import Movies", import_movies_path, method: :post, class: "btn btn-primary" %>
-
 <% @movies.each do |movie| %>
   <div>
     <h2><%= movie.title %></h2>

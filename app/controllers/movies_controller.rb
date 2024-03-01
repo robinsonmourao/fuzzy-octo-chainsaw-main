@@ -1,12 +1,6 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!
 
-  def import
-    file_path = Rails.root.join('path', 'to', '/home/robinson/Desktop/Movies.json')
-    ImportDataWorker.perform_async(file_path)
-    redirect_to movies_path, notice: "Data import has been initiated."
-  end
-
   def index
     @movies = Movie.all
     respond_to do |format|
@@ -27,12 +21,6 @@ class MoviesController < ApplicationController
       render :new
     end
   end
-
-  
-  def show
-    @movie = Movie.find(params[:id])
-  end
-  
 
   private
 
