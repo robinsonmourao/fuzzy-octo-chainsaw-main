@@ -1,5 +1,5 @@
-<h2>Make sure you has TITLE and DIRECTOR in every single movie of json file</h2>
-<%= form_tag movies_import_path, multipart: true do %>
+<h2>Make sure you has TITLE and SCORE in every single movie of json file</h2>
+<%= form_tag user_movies_import_path, multipart: true do %>
   <div class="field">
     <%= label_tag :json_file, "Select a JSON file:" %>
     <%= file_field_tag :json_file, accept: ".json" %>

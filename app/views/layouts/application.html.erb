@@ -8,8 +8,21 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
 
+    <style>
+    nav {
+      text-align: right;
+    }
+    body {
+      background-color: #efefef;
+    }
+    li {
+      display: inline; /* Alinhar itens horizontalmente */
+      margin-right: 20px; /* Adicionar espaço entre os itens */
+    }
+  </style>
+
+  </head>
   <body>
     <nav>
       <% if current_user %>
@@ -21,7 +34,20 @@
         <% end %>
       <% end %>
     </nav>
-
+<body>
+    <ul>
+      <li>
+        <a href="/">Login</a>
+      </li>
+      <li>
+        <a href="/movies">Movies</a>
+      </li>
+      <li>
+        <a href="/user_movies">User_Movies</a>
+      </li>
+    </ul>
+<hr>
+  </body>
     <%= yield %>
   </body>
 </html>

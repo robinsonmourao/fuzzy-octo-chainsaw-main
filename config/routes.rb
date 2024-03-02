@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
   resources :movies, only: [:index, :new, :create]
-  resources :user_movies, only: [:create, :update]
+  resources :user_movies, only: [:index, :create, :update]
 
   get '/login', to: 'sessions#new'
   delete '/logout', to: 'sessions#destroy'
@@ -16,5 +16,10 @@ Rails.application.routes.draw do
 
 
   post '/movies/import', to: 'movies#upload'
+  get '/movies/import', to: 'movies#show'
+
+  post '/user_movies/import', to: 'user_movies#upload'
+  get '/user_movies/import', to: 'user_movies#show'
+
   
 end

@@ -39,7 +39,7 @@ class MoviesController < ApplicationController
             return
           end
         end
-        redirect_to movies_path, notice: 'Movies importing was a success!.'
+        redirect_to movies_path, notice: 'Movies importing was a success!'
       rescue JSON::ParserError => e
         redirect_to movies_path, alert: 'Processing JSON file gone wrong. Make sure that file is in a correct format.'
       end
@@ -48,7 +48,6 @@ class MoviesController < ApplicationController
     end
   end
   
-
 
   private
 
