@@ -22,6 +22,30 @@ class MoviesController < ApplicationController
     end
   end
 
+  
+  def upload
+    json_file = params[:json_file]    
+    if json_file.present? && json_file.respond_to?(:read)
+      json_content = json_file.read
+      
+      begin
+        movies_data = JSON.parse(json_content)
+        
+        movies_data.each do |movie_data|
+          Movie.create(title: movie_data['title'], director: movie_data['director'])
+        end
+        
+        redirect_to movies_path, notice: 'Movies importing was a success!.'
+      rescue JSON::ParserError => e
+        redirect_to movies_path, alert: 'Processing JSON file gone wrong. Make sure that file is in a correct format.'
+      end
+    else
+      redirect_to root_path, alert: 'Any file was uploaded.'
+    end
+  end
+  
+
+
   private
 
   def movie_params

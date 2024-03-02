@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   root 'sessions#new'
+
+
+  post '/movies/import', to: 'movies#upload'
+  
 end

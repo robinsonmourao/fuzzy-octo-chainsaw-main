@@ -1,5 +1,14 @@
 <h1>Movies</h1>
-<%= link_to "Add new", new_movie_path %>
+<%= link_to "Add new movie", new_movie_path %>
+
+<%= form_tag(movies_import_path, multipart: true) do %>
+  <%= file_field_tag :json_file %>
+  <%= submit_tag 'Import movies' %>
+<% end %>
+
+<hr>
+
+
 <% @movies.each do |movie| %>
   <div>
     <h2><%= movie.title %></h2>

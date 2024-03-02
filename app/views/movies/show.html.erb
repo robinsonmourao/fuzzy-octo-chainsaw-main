@@ -1,0 +1,17 @@
+<%= form_tag import_movies_path, multipart: true do %>
+  <div class="field">
+    <%= label_tag :json_file, "Select a JSON file:" %>
+    <%= file_field_tag :json_file, accept: ".json" %>
+  </div>
+  <%= submit_tag "Upload file" %>
+<% end %>
+
+<% flash.each do |type, message| %>
+  <div class="alert alert-<%= type %>"><%= message %></div>
+<% end %>
+
+<div id="json-content" style="margin-top: 20px;">
+  <h2>Content of JSON file:</h2>
+  <pre id="json-content-display"></pre>
+</div>
+<%= javascript_include_tag 'application' %>
