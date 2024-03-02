@@ -30,11 +30,15 @@ class MoviesController < ApplicationController
       
       begin
         movies_data = JSON.parse(json_content)
-        
+
         movies_data.each do |movie_data|
-          Movie.create(title: movie_data['title'], director: movie_data['director'])
+          if movie_data['title'].present? && movie_data['director'].present?
+            Movie.create(title: movie_data['title'], director: movie_data['director'])
+          else
+            redirect_to movies_path, alert: 'One or more required fields are missing for a movie.'
+            return
+          end
         end
-        
         redirect_to movies_path, notice: 'Movies importing was a success!.'
       rescue JSON::ParserError => e
         redirect_to movies_path, alert: 'Processing JSON file gone wrong. Make sure that file is in a correct format.'
