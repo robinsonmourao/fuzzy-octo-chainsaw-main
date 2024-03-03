@@ -51,13 +51,13 @@ class UserMoviesController < ApplicationController
             end
 
           else
-            redirect_to user_movies_path, alert: 'One or more required fields are missing for a movie.'
+            redirect_to movies_path, alert: 'One or more required fields are missing for a movie.'
             return
           end
         end
-        redirect_to user_movies_path, notice: 'User movies score importing was a success!'
+        redirect_to movies_path, notice: 'User movies score importing was a success!'
       rescue JSON::ParserError => e
-        redirect_to user_movies_path, alert: 'Processing JSON file gone wrong. Make sure that file is in a correct format.'
+        redirect_to movies_path, alert: 'Processing JSON file gone wrong. Make sure that file is in a correct format.'
       end
     else
       redirect_to user_movies_path, alert: 'Any file was uploaded.'

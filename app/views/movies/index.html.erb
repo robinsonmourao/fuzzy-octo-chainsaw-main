@@ -2,19 +2,47 @@
 
 <%= link_to "Add new movie", new_movie_path %>
 <%= link_to "Import movies", movies_import_path %>
-
+<%= link_to "Import movies scoring", user_movies_import_path %>
 <hr>
+<style>
+  .movie-list {
+    display: flex; /* Ativa o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens fluam para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+  }
 
+  .movie-list li {
+    width: calc(30% - 20px); /* Define a largura dos itens */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    margin-right: 20px; /* Espaçamento entre os itens */
+    padding: 10px; /* Preenchimento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    background-color: #cccccc; /* Cor de fundo */
+  }
 
-<% @movies.each do |movie| %>
-  <div>
-    <h2><%= movie.title %></h2>
-    <p>Director: <%= movie.director %></p>
-    <p>Average Score: <%= movie.average_score %></p>
-    <%= form_for(current_user.user_movies.find_or_initialize_by(movie_id: movie.id), remote: true) do |f| %>
-      <%= f.hidden_field :movie_id, value: movie.id %>
-      <%= f.number_field :score, in: 1..10, step: 0.1, value: movie.average_score %>
-      <%= f.submit "Rate" %>
-    <% end %>
-  </div>
-<% end %>
+  .movie-list li:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    z-index: 1; /* Coloca o elemento sobre os outros */
+  }
+</style>
+
+<ul class="movie-list">
+  <% @movies.each do |movie| %>
+    <li>
+      <div>
+        <h2><%= movie.title %></h2>
+        <p>Director: <%= movie.director %></p>
+        <p>Average Score: <%= sprintf("%.1f", movie.average_score.to_f) %></p>
+        <%= form_for(current_user.user_movies.find_or_initialize_by(movie_id: movie.id), remote: true) do |f| %>
+          <%= f.hidden_field :movie_id, value: movie.id %>
+          <%= f.number_field :score, in: 1..10 %>
+          <%= f.submit "Rate" %>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+</ul>

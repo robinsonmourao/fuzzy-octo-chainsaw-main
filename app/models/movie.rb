@@ -4,5 +4,5 @@ class Movie < ApplicationRecord
 
   def average_score
     user_movies.average(:score).to_f
-  end
+  end  
 end

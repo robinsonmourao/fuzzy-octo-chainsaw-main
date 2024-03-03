@@ -14,12 +14,10 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
 
-
   post '/movies/import', to: 'movies#upload'
   get '/movies/import', to: 'movies#show'
 
   post '/user_movies/import', to: 'user_movies#upload'
   get '/user_movies/import', to: 'user_movies#show'
-
-  
+    
 end
