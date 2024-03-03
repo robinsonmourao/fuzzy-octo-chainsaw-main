@@ -19,7 +19,6 @@ class UserMoviesController < ApplicationController
     redirect_to movies_path
   end
 
-
   def index
     @usermovies = UserMovie.all
   end
@@ -35,18 +34,13 @@ class UserMoviesController < ApplicationController
         user_movies_data.each do |user_movie_data|
           if user_movie_data['title'].present? && user_movie_data['average_score'].present?
 
-            # O que já estão criados são MOVIES e USER
-            # Falta saber como estao as suas ligação de id e
-            # IDS sao gerados automaticamente entao talvez comparar por nome do filme
-
             title_user_movie = user_movie_data['title']
 
             movie = Movie.where(title: title_user_movie).first
-            user_id_manual_4test = 1
 
             if movie.present?
               
-              @user_movie = UserMovie.new(user_id: user_id_manual_4test, movie_id: movie['id'], score: user_movie_data['average_score'])
+              @user_movie = UserMovie.new(user_id: current_user.id, movie_id: movie['id'], score: user_movie_data['average_score'])
               @user_movie.save
             end
 
@@ -67,6 +61,4 @@ class UserMoviesController < ApplicationController
   def user_movie_params
     params.require(:user_movie).permit(:user_id, :movie_id, :score)
   end
-
-
 end

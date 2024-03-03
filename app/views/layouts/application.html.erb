@@ -9,7 +9,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <style>
+  <style>
+
+    body {
+      background-color: #F3F8FF
+    }
     nav {
       text-align: right;
     }
@@ -17,7 +21,32 @@
       display: inline;
       margin-right: 50px;
     }
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .logo {
+      width: auto;
+      height: auto;
+      max-width: 100px;
+      max-height: 100px;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+    }
   </style>
+  
+  <div class="container">
+    <img class="logo" src="<%= asset_path('logo.png') %>" alt="Logo">
+  </div>
 
   </head>
   <body>
