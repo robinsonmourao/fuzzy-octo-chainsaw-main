@@ -79,35 +79,35 @@
 * `./app` Application
   * `/assert`
     * `/images` OxeanFlix logo
-  * `/controllers` Regras de negócio e controladores de acesso ao banco de dados Session, User, Movie and User_movie
-  * `/models` Modelos Session, User, Movie and User_movie
-  * `/views` Interface entre cliente-servidor
+  * `/controllers` Business rules and access controllers of Session, User, Movie and User_movie to database
+  * `/models` Models Session, User, Movie and User_movie
+  * `/views` Interface between cliente-servidor
 * `./bin` Binaries of rails scripts
 * `./db` [D]ata[B]ase
-  * `/migrate` Configurações essenciais de migração das tabelas a se implementar em banco de dados
+  * `/migrate` Essentials migrations configurations of the tables to set database
 * `./lib` Libraries
-  * `/data` Path padrão para armazenamento de arquivos JSON utilizados no import em massa
-* `./log` Armazenamento de logs dos servidores de profile development e tests
-* `./spec` Path padrão da ferramenta de testes RSpec
-  * `/models` Códigos para testes do modelo
-  * `/routing` Códigos para testes de rota
-* `./storage` Arquivos do banco de dados SQLite3
+  * `/data` Default path to import plenty of movies by JSON file payload
+* `./log` Keeps server logs from development and tests profile
+* `./spec` Default path to testing tool RSpec
+  * `/models` Testing code of models testing
+  * `/routing` Testing code of routes testing
+* `./storage` Files from SQLite3 database
 * `./tmp` Temporary files
-* `Gemfile` Arquivo contendo as dependências de projeto
-* `Dockerdile` Instruções para construção da imagem do projeto
+* `Gemfile` Dependencies
+* `Dockerdile` Configurations to build a projeto docker image
 * `README.MD` Description of project
 <hr>
 
 # 3. Fluxos do OxeanFlix
 
-### Ao realizar o login o usuário terá acesso a cadastramento de um Movie ou de vários, neste ultimo importando por arquivo JSON.
+### A logued user could access one or many Movies by batching processing.
 <p align="center">
-  <img src="https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/52f6cca9-97a3-409e-a55e-04600d91983a" alt="Diagrama de fluxo"/>
+  <img src="https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/52f6cca9-97a3-409e-a55e-04600d91983a" alt="Flux diagram"/>
 </p>
 
-# 4. Diagrama relacional OxeanFlix 
+# 4. OxeanFlix relational diagram
 
-### Uma das principais características do projeto OceanFlix é a relação entre User e Movie, ilustrada na Figura abaixo:
+### One of the most characteristics of OxeanFlix is the relation between User e Movie, showing by the following picture:
 <p align="center">
-  <img src="https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/40368693-0ab9-4b11-b98e-5af1b3abcad0" alt="Diagrama de relacionamentos"/>
+  <img src="https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/40368693-0ab9-4b11-b98e-5af1b3abcad0" alt="Relational diagram"/>
 </p>
