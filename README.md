@@ -1,45 +1,98 @@
-### Desafio para vaga de BackEnd - Foco em Ruby On Rails:
+# OxeanFlix
 
-Objetivo do Desafio:
+Ruby on rails solution that provides saving movies data and importing by batch processing.
 
-O objetivo deste desafio é avaliar suas habilidades no desenvolvimento com o framework Ruby On Rails, bem como quaisquer integrações necessárias, a implementação de funcionalidades que executam em segundo plano de forma síncrona, a escrita de testes e a criação de uma documentação clara.
+## 🛠 Tech Stack
 
-#### Requisitos:
+To make this project run you will need to have the following items installed: 
 
-- ruby-3.1.4
-- sqlite3
+* Ruby 3.1.4p223
+* Rails 7.1.3.2
+* SQLite 3.22.0
+* Rspec 3.13
 
-Clone o projeto e ao executar:
+## :rocket: Get ready
 
-```ruby
+### Clone the repository:
+
+```
+git clone https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main.git
+```
+### Execute the command of Ruby programming language installer:
+```
+sudo apt-get install ruby-full
+```
+### Execute the following comands:
+
+```
 bundle install
+```
+```
 rails db:migrate
+```
+```
 rails db:seed
 ```
-Será configurado uma aplicação rails contando com as seguintes funcionalidades:
-- Usuário padrão admin@rotten e senha admin
-- Página de login
-- Rota para criação de novos usuários
-- Rota para cadastrar novo filme
-- Rotas para dar nota nos filmes
-- Exibi a média das notas de cada filme
+### Execute command to install SQLite
+
+```
+sudo apt-get install sqlite3
+```
+
+## :arrow_forward: Running
+
+### Change directory to where you have cloned OxeanFlix project
+
+> cd /your-root-directory/.../your-project-folder-name-here <br>
+
+### Execute start rails application command:
+
+```
+rails s
+```
+
+### Access OxeanFlixAPI, you will access the following address
+
+[http://localhost:3000/](http://localhost:3000/)
 
 
-#### Desafio:
+## :gear: Running tests
 
-- Criar uma rota para importar em massa vários filmes
-  - Você pode criar essa rota para receber um arquivo csv ou um playload json, ou outra forma que ficar mais fácil de integrar
-- Criar uma rota para submeter notas em massa para vários filmes
-  - Você pode criar essa rota para receber um arquivo csv ou um playload json, ou outra forma que ficar mais fácil de integrar
-- As tarefas acima **devem ser executadas em segundo plano**
-  - Recomedamos usar o [Sidekiq](https://github.com/sidekiq/sidekiq) para gerenciar as tarefas em segundo plano, mas você pode escolher outra soluçãn
+### Execute RSpec install commands:
+```
+gem install rspec
+```
+```
+gem install bundler
+```
 
-#### Pontos Extras:
-- Criar testes para as rotas da API e models da aplicação
-  - Recomendamos usar o [Rspec](https://semaphoreci.com/community/tutorials/getting-started-with-rspec) para os testes, mas você pode escolher outra solução
+## :closed_book:Documentation
 
+The main specification of OxeanFlixAPI can be obtained at [https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md](https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md).
 
-#### Entrega:
+* Get more information about [Ruby](https://www.ruby-lang.org/en/documentation/)<br>
+* Get more information about [Ruby on Rails](https://rubyonrails.org/)<br>
+* Get more information about [SQLite3](https://www.sqlite.org/docs.html)<br>
+* Get more information about [RSpec](https://rspec.info/documentation/)
 
-No README.md descreva as instruções sobre como executar o projeto, configurar variáveis de ambiente e executar os testes.
-Ao finalizar, forneça um link para o repositório do GitHub contendo o código-fonte e a documentação, enviado para o email vagas{at}oxeanbits{dot}com
+## 👩‍💻👨‍💻 Contributors 
+
+<table>
+    <td align="center">
+	    <a href="https://github.com/Marinofull">
+		    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/4636436?v=4" width="100px;" alt=""/>
+		    <br/><sub><b>Marino Hohenheim</b></sub>
+		</a>
+    </td>
+    <td align="center">
+	    <a href="https://github.com/robinsonmourao">
+		    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49078615?s=460&u=1163c04d9f35b577063b3f6550ae520c4dd2f866&v=4" width="100px;" alt=""/>
+		    <br/><sub><b>Robinson Mourão</b></sub>
+		</a></br>
+    </td>
+</table>
+
+## :mailbox: Contact us
+* Contact us by email [Marino Hohenheim](mailto:intmarinoreturn0@gmail.com)
+* Contact us by email [Robinson Mourão](mailto:bob.info.guaratiba@gmail.com)
+---
