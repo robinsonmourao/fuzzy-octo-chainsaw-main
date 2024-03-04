@@ -1,69 +1,69 @@
-# 1. Rotas OxeanFlix
+# 1. OxeanFlix Routes
 
-## Rotas padrões
+## Default routes
 
-### Rotas de User
+### User Routes
 
-    Descrição: Permite criar novos usuários na aplicação.
+    Allows to create users
 
 * `/users`
-  * `/new/` `GET` Renderiza um formulário para preencher dados de um novo user `🔒implicit route`
-  * `/create/` `POST` Ação de CRIAR um novo user em banco de dados `🔒implicit route`
+  * `/new/` `GET` Render a form to fill a user data `🔒implicit route`
+  * `/create/` `POST` Action of create a new user in database `🔒implicit route`
 
-### Rotas de Sessions
+### Session routes
 
-    Descrição: Gerencia a autenticação de user na aplicação.
+    Manages user authentication
     
 * `/sessions/`
-  * `/new/` `GET` Renderiza um formulário para preencher dados de sessions `🔒implicit route`
-  * `/create/` `POST` Permite CRIAR uma sessions em banco de dados `🔒implicit route`
-  * `/destroy/` `DELETE` Ação de DELETAR uma session previamente criadas do banco de dados `🔒implicit route`
+  * `/new/` `GET` Render a form to fill Sessions data`🔒implicit route`
+  * `/create/` `POST` Allows CREATE a Session in database`🔒implicit route`
+  * `/destroy/` `DELETE` Action of DELETE a Session previously created in the database`🔒implicit route`
 
-### Rotas de Movies
+### Movie routes
 
-    Descrição: Manipula as operações relacionadas aos filmes na aplicação.
+    Manages Movies operations
 
 * `/movies/`
-  * `/index/` `GET` Renderiza a página inicial de movies `🔒implicit route`
-  * `/new/` `GET` Renderiza um formulário para preencher dados de um movie
-  * `/create/` `POST` Ação de CRIAR um movie em banco de dados `🔒implicit route`
+  * `/index/` `GET` Render the index page of movies `🔒implicit route`
+  * `/new/` `GET` Render a form to fill data movie
+  * `/create/` `POST` Action of CREATE A Movie in the database `🔒implicit route`
 
-### Rotas de User_movies
+### User_movies routes
 
-    Descrição: Gerencia as interações dos usuários com os filmes, como adicionar e atualizar filmes assistidos.
+    Manages the relation between of User and Movie
 
 * `/user_movies/`
-  * `/index/` `GET` Renderiza a página inicial de uma relaçao user-movie `🔒implicit route`
-  * `/new/` `GET` Renderiza um formulário para preencher dados para uma relação user-movie
-  * `/update/` `PUT` Ação de ATUALIZAR uma relação user-movie em banco de dados `🔒implicit route`
+  * `/index/` `GET` Render the index page of User-movie `🔒implicit route`
+  * `/new/` `GET` Render a form to fill data of a relation between User and Movie
+  * `/update/` `PUT` Action of UPDATE a User-Movie relation in the database `🔒implicit route`
 
-## Rotas Personalizadas
+## Customizated routes
 
-### Rota de Login
+### Login route
 
-    Descrição: Página de login para os usuários acessarem a aplicação.
+    Login page to User
 
-  * `/login` `GET` Renderiza página inicial de login
+  * `/login` `GET` Render login page
 
-### Rota de Logout
+### Logout route
 
-    Descrição: Página de logout para finalizar session.
+    Logout page to finish session
 
-  * `/logout` `DELETE` Finaliza session e renderiza página inicial
+  * `/logout` `DELETE` fnishes Session then render homepage of application
 
-### Rota de Página Inicial
+### Homepage route
 
-     Descrição: Página inicial da aplicação, redireciona para a página de login.
+     Homepage's application
  
-  * `/` `GET` Renderiza página inicial
+  * `/` `GET` Render homepage
 
-### Rota de Importação de Filmes
+### Movies import route
 
-    Descrição: Permite importar filmes para a aplicação.
+    Allows import movies
     
   * `/movies/import`
-    *   `/show/` `GET` Rederiza a importação de movies em massa `🔒implicit route`
-    *   `/upload/` `POST` Ação CRIAR filmes em massa no banco de dados via JSON file `🔒implicit route`
+    *   `/show/` `GET` Render a page to select a JSON file to import a lot of movies by batch processing`🔒implicit route`
+    *   `/upload/` `POST` Action CREATE plenty of Movies sending it by JSON file to database `🔒implicit route`
 
 ### Rota de Importação de Filmes do Usuário
 
