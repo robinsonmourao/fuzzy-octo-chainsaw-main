@@ -60,15 +60,14 @@ rails s
 
 ### Execute RSpec install commands:
 
-Linux:
+On Windows, add this command on ./gemfile:
+```
+gem 'rspec-rails'
+````
+or on Linux:
 ```
 echo "gem 'rspec-rails'" >> Gemfile
 ```
-or Windows:
-```
-echo gem 'rspec-rails' >> Gemfile
-```
-then any O.S.
 ```
 gem install rspec
 ```
@@ -79,6 +78,12 @@ gem install bundler
 bundle update rspec-rails
 ```
 
+### How about Database?
+
+Well, you can access the SQLite3 database just get in ./storage folder then insert this following command:
+```
+sqlite3 development.sqlite3
+```
 ## :closed_book:Documentation
 
 The main specification of OxeanFlixAPI can be obtained at [https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md](https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md).
