@@ -11,18 +11,18 @@ To make this project run you will need to have the following items installed:
 * SQLite 3.22.0
 * Rspec 3.13
 
-## :rocket: Starting the project
+## :rocket: Get ready
 
-### * Clone the repository:
+### Clone the repository:
 
 ```
 git clone https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main.git
 ```
-### * Execute o comando para instalar a linguagem de programação Ruby:
+### Execute the command of Ruby programming language installer:
 ```
 sudo apt-get install ruby-full
 ```
-### * Execute the following comands:
+### Execute the following comands:
 
 ```
 bundle install
@@ -33,7 +33,7 @@ rails db:migrate
 ```
 rails db:seed
 ```
-### * Execute command to install SQLite
+### Execute command to install SQLite
 
 ```
 sudo apt-get install sqlite3
@@ -41,24 +41,24 @@ sudo apt-get install sqlite3
 
 ## :arrow_forward: Running
 
-### * Change directory to where you have cloned OxeanFlix project
+### Change directory to where you have cloned OxeanFlix project
 
 > cd /your-root-directory/.../your-project-folder-name-here <br>
 
-### * Execute start rails application command:
+### Execute start rails application command:
 
 ```
 rails s
 ```
 
-### * Access OxeanFlixAPI, you will access the following address
+### Access OxeanFlixAPI, you will access the following address
 
 [http://localhost:3000/](http://localhost:3000/)
 
 
 ## :gear: Running tests
 
-### * Execute RSpec install commands:
+### Execute RSpec install commands:
 ```
 gem install rspec
 ```
