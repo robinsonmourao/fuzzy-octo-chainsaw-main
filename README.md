@@ -60,9 +60,15 @@ rails s
 
 ### Execute RSpec install commands:
 
+Linux:
 ```
 echo "gem 'rspec-rails'" >> Gemfile
 ```
+or Windows:
+```
+echo gem 'rspec-rails' >> Gemfile
+```
+then any O.S.
 ```
 gem install rspec
 ```
