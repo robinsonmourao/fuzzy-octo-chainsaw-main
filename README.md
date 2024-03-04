@@ -59,11 +59,18 @@ rails s
 ## :gear: Running tests
 
 ### Execute RSpec install commands:
+
+```
+echo "gem 'rspec-rails'" >> Gemfile
+```
 ```
 gem install rspec
 ```
 ```
 gem install bundler
+```
+```
+bundle update rspec-rails
 ```
 
 ## :closed_book:Documentation
