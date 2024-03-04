@@ -105,7 +105,7 @@
   <img src="https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/52f6cca9-97a3-409e-a55e-04600d91983a" alt="Diagrama de fluxo"/>
 </p>
 
-# 4. Esquema de banco de dados OxeanFlix 
+# 4. Diagrama relacional OxeanFlix 
 
 ### Uma das principais características do projeto OceanFlix é a relação entre User e Movie, ilustrada na Figura abaixo:
 <p align="center">
