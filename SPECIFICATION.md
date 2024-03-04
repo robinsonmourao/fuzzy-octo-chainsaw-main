@@ -49,7 +49,7 @@
 
     Logout page to finish session
 
-  * `/logout` `DELETE` fnishes Session then render homepage of application
+  * `/logout` `DELETE` finishes Session then render homepage of application
 
 ### Homepage route
 
@@ -65,13 +65,13 @@
     *   `/show/` `GET` Render a page to select a JSON file to import a lot of movies by batch processing`🔒implicit route`
     *   `/upload/` `POST` Action CREATE plenty of Movies sending it by JSON file to database `🔒implicit route`
 
-### Rota de Importação de Filmes do Usuário
+### User-movies import route
 
-    Descrição: Permite importar filmes para a lista de filmes do usuário.
+    Allows to import a bunch of Movies
     
   * `/movies/import`
-    *   `/show/` `GET` Rederiza a importação de relações user_movies em massa `🔒implicit route`
-    *   `/upload/` `POST` Ação CRIAR user_movies em massa no banco de dados via JSON file `🔒implicit route`
+    *   `/show/` `GET` Reder a page to import of many User-Movie scoring points `🔒implicit route`
+    *   `/upload/` `POST` Action CREATE a lot of scores that User do to many Movies `🔒implicit route`
 <hr>
 
 # 2. Directory structure OxeanFlix
