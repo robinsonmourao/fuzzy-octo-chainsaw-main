@@ -59,13 +59,39 @@ rails s
 ## :gear: Running tests
 
 ### Execute RSpec install commands:
+
+On Windows, add this command on ./gemfile:
+```
+gem 'rspec-rails'
+````
+or on Linux:
+```
+echo "gem 'rspec-rails'" >> Gemfile
+```
 ```
 gem install rspec
 ```
 ```
 gem install bundler
 ```
+```
+bundle update rspec-rails
+```
+To run model tests:
+```
+rspec spec/models
+```
+To run route tests:
+```
+rspec spec/routing
+```
 
+## How about Database?
+
+Well, you can access the SQLite3 database just get in root project directory './' then insert this following command:
+```
+sqlite3 storage/development.sqlite3
+```
 ## :closed_book:Documentation
 
 The main specification of OxeanFlixAPI can be obtained at [https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md](https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/blob/master/SPECIFICATION.md).
