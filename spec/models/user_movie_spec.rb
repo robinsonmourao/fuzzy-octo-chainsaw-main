@@ -11,24 +11,24 @@ RSpec.describe UserMovie, type: :model do
     describe 'validations' do
 
         it 'must be valid trying valid attributes' do
-            user_movie = UserMovie.new(user_id: user.id,  movie_id: movie.id, score: expected_score)
-            expect(user_movie).to be_valid
-            expect(user_movie.score).to eq(actual_score)
+            actual_User_movie = UserMovie.new(user_id: user.id,  movie_id: movie.id, score: expected_score)
+            expect(actual_User_movie).to be_valid
+            expect(actual_User_movie.score).to eq(actual_score)
         end
 
         it 'must be invalid trying without an user id' do
-            user_movie = UserMovie.new(movie_id: movie.id, score: expected_score)
-            expect(user_movie).to_not be_valid
+            actual_User_movie = UserMovie.new(movie_id: movie.id, score: expected_score)
+            expect(actual_User_movie).to_not be_valid
         end
 
         it 'must be invalid trying without a movie id' do
-            user_movie = UserMovie.new(user_id: user.id, score: expected_score)
-            expect(user_movie).to_not be_valid
+            actual_User_movie = UserMovie.new(user_id: user.id, score: expected_score)
+            expect(actual_User_movie).to_not be_valid
         end
 
         it 'must be invalid trying without score' do
-            user_movie = UserMovie.new()
-            expect(user_movie).to_not be_valid
+            actual_User_movie = UserMovie.new()
+            expect(actual_User_movie).to_not be_valid
         end
     end
 end
