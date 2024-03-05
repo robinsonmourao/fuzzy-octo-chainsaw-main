@@ -77,12 +77,20 @@ gem install bundler
 ```
 bundle update rspec-rails
 ```
-
-### How about Database?
-
-Well, you can access the SQLite3 database just get in ./storage folder then insert this following command:
+To run model tests:
 ```
-sqlite3 development.sqlite3
+rspec spec/models
+```
+To run route tests:
+```
+rspec spec/routing
+```
+
+## How about Database?
+
+Well, you can access the SQLite3 database just get in root project directory './' then insert this following command:
+```
+sqlite3 storage/development.sqlite3
 ```
 ## :closed_book:Documentation
 
