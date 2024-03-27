@@ -55,6 +55,10 @@ rails s
 
 [http://localhost:3000/](http://localhost:3000/)
 
+## Default login permission
+
+`Email: 'admin@rotten'`
+`Password: 'admin'`
 
 ## :gear: Running tests
 
