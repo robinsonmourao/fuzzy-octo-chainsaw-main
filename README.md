@@ -1,6 +1,9 @@
 # OxeanFlix
 
 Ruby on rails solution that provides saving movies data and importing by batch processing.
+# Demonstrations
+## Screens
+![image](https://github.com/robinsonmourao/fuzzy-octo-chainsaw-main/assets/49078615/02878ed9-9d3a-4e00-b97c-30e6814a72ab)
 
 ## 🛠 Tech Stack
 
